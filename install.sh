@@ -57,7 +57,7 @@ hyprctl reload
 
 echo "testing Pywal color updates."
 mkdir ~/.config/rofi
-cp /wallpapers/nothing.jpg ~/Pictures/nothing.jpg
+cp ~/dots/wallpapers/nothing.jpg ~/Pictures/nothing.jpg
 $wall = "~/Pictures/nothing.jpg"
 ## also wallpaper function in .bashrc
 swww img "$wall" && wal -i "$wall" && mv ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/config.rasi && echo "wallpaper updated"
