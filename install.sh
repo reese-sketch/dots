@@ -28,7 +28,7 @@ echo "Moving files from dotfiles to your .config"
 mkdir ~/.config/fastfetch
 echo "made directory fastfetch in .config"
 
-cp ~/dots/fastfetch/config.jsonc ~/.config/fastfetch/
+cp ~/dots/dots/fastfetch/config.jsonc ~/.config/fastfetch/
 echo "moved config.jsonc to fastfetch folder"
 
 hyprctl monitors all
@@ -37,9 +37,9 @@ read display
 sleep 10s
 
 
-echo $display >> ~/dots/hypr/display.conf
+echo $display >> ~/dots/dots/hypr/display.conf
 
-echo ", 0x0, 1" >> ~/dots/hypr/display.conf
+echo ", 0x0, 1" >> ~/dots/dots/hypr/display.conf
 
 echo "Display configuration appended to display.conf"
 
@@ -50,8 +50,8 @@ hyprpm enable borders-plus-plus
 hyprpm reload
 
 
-cp /hypr/hyprland.conf ~/.config/hypr/hyprland.conf
-cp /hypr/display.conf ~/
+cp ~/dots/dots/hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+cp ~/dots/dots/hypr/display.conf ~/
 echo "moved config to hyprland.conf"
 
 hyprctl reload
