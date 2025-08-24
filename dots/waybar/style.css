@@ -1,0 +1,47 @@
+@import '/home/reese/.cache/wal/colors-waybar.css';
+
+* {
+	font-family: "JetBrains Mono Nerd Font";
+	font-size: 12px;
+}
+window#waybar {
+
+	margin-left: 8px;
+	margin-right: 8px;
+	background: none;
+}
+
+.modules-left, .modules-center, .modules-right {
+
+	font-weight: bold;
+	margin-left: 4px;
+	margin-right: 4px;
+	border-radius: 32px;
+	border: 2px solid @foreground;
+	outline: 6px solid @foreground;
+	padding-left: 16px;
+	padding-right: 16px;
+	opacity: 0.9;
+	background: @background;
+	color: @foreground;
+}
+
+
+#workspaces button {
+	color: @foreground;
+	transition: margin-left 1s ease-in-out;
+	transition: margin-right 1s ease-in-out;
+	transition: color 0.1s ease-in-out;
+}
+
+#workspaces button.active {
+	
+	color: @color4;
+}
+
+
+#cpu, #battery, #clock {
+
+	padding-left: 8px;
+	padding-right: 8px;
+}
