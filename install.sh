@@ -32,8 +32,10 @@ cp ~/dots/fastfetch/config.jsonc ~/.config/fastfetch/
 echo "moved config.jsonc to fastfetch folder"
 
 hyprctl monitors all
+echo "What display do you want in display.conf? (IMPORTANT: THIS WILL BE YOUR MONITOR)"
+read display
+sleep 10s
 
-read -p "What display do you want in display.conf? (IMPORTANT: THIS WILL BE YOUR MONITOR)" display
 
 echo $display >> ~/dots/hypr/display.conf
 
