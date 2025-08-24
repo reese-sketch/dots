@@ -45,6 +45,7 @@ echo "Setting up hyprpm."
 hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm enable borders-plus-plus
+hyprpm reload
 
 
 cp /hypr/hyprland.conf ~/.config/hypr/hyprland.conf
@@ -59,6 +60,8 @@ echo "testing Pywal color updates."
 mkdir ~/.config/rofi
 cp ~/dots/wallpapers/nothing.jpg ~/Pictures/nothing.jpg
 $wall = "~/Pictures/nothing.jpg"
+## !! MOVE HYPRLAND COLOR CONFIG!!
+cp ~/dots/wal-templates/hyprland-colors.conf ~/wal/templates/hyprland-colors.conf
 ## also wallpaper function in .bashrc
 swww img "$wall" && wal -i "$wall" && mv ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/config.rasi && echo "wallpaper updated"
 mkdir ~/.config/waybar
