@@ -8,7 +8,7 @@ echo "-------------------------------------------------"
 
 echo "Installing git"
 
-sudo pacman -S git
+sudo pacman -S git clang meson cpio cmake pkg-config gcc
 
 
 echo "downloading dotfiles"
@@ -28,30 +28,27 @@ echo "Moving files from dotfiles to your .config"
 mkdir ~/.config/fastfetch
 echo "made directory fastfetch in .config"
 
-mv fastfetch/config.jsonc ~/.config/fastfetch/
+cp ~/dots/fastfetch/config.jsonc ~/.config/fastfetch/
 echo "moved config.jsonc to fastfetch folder"
 
 hyprctl monitors all
 
 read -p "What display do you want in display.conf? (IMPORTANT: THIS WILL BE YOUR MONITOR)" display
 
-echo $display >> /hypr/display.conf
+echo $display >> ~/dots/hypr/display.conf
 
-echo ", 0x0, 1" >> /hypr/display.conf
+echo ", 0x0, 1" >> ~/dots/hypr/display.conf
 
 echo "Display configuration appended to display.conf"
 
 echo "Setting up hyprpm."
-
-hyprpm add https://github.com/hyprwm/hyprland-plugins
-
 hyprpm update
-
+hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm enable borders-plus-plus
 
 
-mv /hypr/hyprland.conf ~/.config/hypr/hyprland.conf
-mv /hypr/display.conf ~/
+cp /hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+cp /hypr/display.conf ~/
 echo "moved config to hyprland.conf"
 
 hyprctl reload
@@ -60,11 +57,15 @@ hyprctl reload
 
 echo "testing Pywal color updates."
 mkdir ~/.config/rofi
-mv /wallpapers/nothing.jpg ~/Pictures/nothing.jpg
-$wall ="" ~/Pictures/nothing.jpg"
+cp /wallpapers/nothing.jpg ~/Pictures/nothing.jpg
+$wall = "~/Pictures/nothing.jpg"
+## also wallpaper function in .bashrc
 swww img "$wall" && wal -i "$wall" && mv ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/config.rasi && echo "wallpaper updated"
 mkdir ~/.config/waybar
-mv /waybar/config ~/.config/waybar/config.jsonc
-mv /waybar/style.css ~/.config/waybar/style.css
+mkdir ~/.config/kitty
+
+cp  ~/dots/kitty/kitty.conf ~/.config/kitty/kitty.conf
+cp ~/dots/waybar/config ~/.config/waybar/config.jsonc
+cp ~/dots/waybar/style.css ~/.config/waybar/style.css
 
 echo "Changes complete. press SUPER + Shift + E to exit hyprland and log back in."
