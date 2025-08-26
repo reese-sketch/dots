@@ -11,11 +11,11 @@ mkdir "kitty"
 mkdir "fastfetch"
 
 ls -l
-cd "~/"
-mkdir "Pictures"
+cd "$HOME/"
+mkdir "$HOME/Pictures"
 
 
-cd "~/dots"
+cd "$HOME/dots"
 
 ls -l
 sleep 1
