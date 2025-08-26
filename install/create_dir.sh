@@ -1,6 +1,6 @@
 ## create directories needed for dots
 
-cd "~/.config"
+cd "$HOME/.config"
 
 mkdir "waybar"
 mkdir "wal"

@@ -3,6 +3,6 @@ sudo pacman -Sy
 
 sudo swww-daemon &
 
-wal -i "~/Pictures/nothing.jpg"
+wal -i "$HOME/Pictures/nothing.jpg"
 
-swww img "~/Pictures/nothing.jpg"
+swww img "$HOME/Pictures/nothing.jpg"

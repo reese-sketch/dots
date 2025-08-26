@@ -7,38 +7,24 @@ echo " ....  ....    .   .     ..... ..... ..... ..... "
 echo "-------------------------------------------------"
 
 echo "Installing git"
-
 sudo pacman -S git clang meson cpio cmake pkg-config gcc
-
-cd "~/"
-
+cd "$HOME"
 echo "downloading dotfiles"
 git clone "https://github.com/reese-sketch/dots.git"
 cd "~/dots"
-
 sudo pacman -S ttf-jetbrains-mono-nerd waybar rofi python-pywal swww fastfetch
 echo "dependencies downloaded"
 sleep 0.2
 echo "running pacman -Sy just in case"
 sudo pacman -Sy
-
 sleep 0.2
-
 echo "creating directories"
 ./install/create_dir.sh 
-
 echo "directory creation complete"
-
 ./install/hypr_setup.sh
-
 echo "hypr setup complete"
-
 ./install/pywal.sh
-
 echo "pywal setup complete"
-
 ./install/move_files.sh
-
 echo "files moved"
-
 echo "Changes complete. press SUPER + Shift + E to exit hyprland and log back in."
