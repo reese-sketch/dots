@@ -1,27 +1,21 @@
-cd "~/dots/dots"
-
+cd "$HOME/dots/dots"
 clear
-
 echo "moving files from ~/dots/dots to ~/.config"
-sleep 3s
-
-
+sleep 1s
 ls -l
-
-cp "fastfetch/config.jsonc" "~/.config/fastfetch/config.jsonc"
-
-cp "wal-templates/colors-hyprland.conf" "$HOME/.config/wal/templates/colors-hyprland.conf"
-cp "hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
-cp "hypr/display.conf" "$HOME/.config/hypr/display.conf"
-cp "kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
-cp "waybar/config" "$HOME/.config/waybar/config"
-cp "waybar/style.css" "$HOME/.config/waybar/style.css"
-
+mv "$HOME/dots/dots/fastfetch/config.jsonc" "$HOME/.config/fastfetch/config.jsonc"
+ls -a "$HOME/.config/fastfetch/"
+mv "$HOME/dots/dots/wal-templates/colors-hyprland.conf" "$HOME/.config/wal/templates/colors-hyprland.conf"
+ls -a "$HOME/.config/wal/templates/"
+mv "$HOME/dots/dots/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
+ls -a "$HOME/.config/hypr/"
+mv "$HOME/dots/dots/hypr/display.conf" "$HOME/.config/hypr/display.conf"
+ls -a "$HOME/.config/hypr/"
+mv "$HOME/dots/dots/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
+mv "$HOME/dots/dots/waybar/config" "$HOME/.config/waybar/config"
+mv "$HOME/dots/dots/waybar/style.css" "$HOME/.config/waybar/style.css"
 cp ".bashrc" "$HOME"
-
 cd "$HOME"
 ls -a -l
-
 cd "$HOME/.config"
-
 ls -a -l
