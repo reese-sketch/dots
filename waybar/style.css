@@ -1,0 +1,182 @@
+@import 'colors.css';
+
+* {
+	font-family: "JetBrains Mono Nerd Font";
+	font-size: 12px;
+}
+window#waybar {
+
+	padding-left: 12px;
+	padding-right: 12px;
+	background: none;
+}
+.modules-left, .modules-center, .modules-right {
+
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 4px;
+	margin-right: 4px;
+	border-radius: 16px;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-weight: bold;
+	padding-left: 16px;
+	padding-right: 16px;
+	background: none;
+	color: @foreground;
+}
+.modules-left {
+	color: @foreground;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	transition: all 0.1s ease-out;
+}
+
+.modules-right {
+	border: none;
+}
+
+.modules-center {
+	background: none;
+	padding-left: 16px;
+	padding-right: 16px;
+	transition: all 1s ease-in-out;
+}
+
+#workspaces {
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 32px;
+	background: @surface_container;
+}
+
+#window {
+	transition: all 0.1s ease-out;
+	background: @surface_container;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 16px;
+}
+
+#workspaces button {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 4px;
+	padding-right: 4px;
+	border: none;
+	margin-left: 1px;
+	margin-right: 1px;
+	color: @foreground;
+	background: @on_primary;
+	border-radius: 16px;
+	transition: all 0.25s ease-in-out;
+}
+
+#workspaces button.active {
+	transition: all 0.25s ease-in-out;	
+	padding-left: 12px;
+	padding-right: 12px;
+	background: @secondary;	
+	color: @surface_dim;
+}
+#workspaces button:hover {
+
+	padding-left: 12px;
+	padding-right: 12px;
+	background: @secondary;
+	color: @surface_dim;
+
+}
+#mpris, #temperature, #cpu, #memory, #tray, #custom-wall, #custom-cat, #pulseaudio, #battery, #clock {
+
+
+	transition: all 0.1s ease-out;
+	background: @surface_container_high;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 16px;
+	padding-left: 8px;
+	padding-right: 8px;
+
+}
+
+#custom-wall:hover {
+
+	transition: all 0.1s ease-out;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: @surface_dim;
+	background: @on_surface;
+}
+
+#pulseaudio:hover {
+
+	transition: all 0.1s ease-out;
+	padding-left: 12px;
+	padding-right: 12px;	
+	color: @surface_dim;
+	background: @primary;
+}
+
+#battery:hover {
+	transition: all 0.1s ease-out;
+	padding-left: 12px;
+       	padding-right: 12px;
+	background: @secondary;
+	color: @surface_dim;
+}
+
+#clock:hover {
+	transition: all 0.1s ease-out;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: @surface_dim;
+	background: @tertiary;
+}
+
+#custom-cat:hover {
+	transition: all 0.1s ease-out;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: @surface_dim;
+	background: @source_color;
+}
+
+#taskbar {
+
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background: @on_surface;
+	border-radius: 32px;
+}
+
+
+#tray menu {
+	
+	background: @surface_dim;
+	color: @on_surface;
+}
+#cpu:hover {
+	transition: all 0.1s ease-out;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: @surface_dim;
+	background: @primary;
+}
+#memory:hover {
+	padding-left: 12px;
+	padding-right: 12px;
+	transition: all .1s ease-out;
+	color: @surface_dim;
+	background: @secondary;
+}
+#temperature:hover {
+	transition: all .1s ease-out;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: @surface_dim;
+	background: @source_color;
+}
+

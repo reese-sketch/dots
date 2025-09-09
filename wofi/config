@@ -1,0 +1,10 @@
+[Configuration]
+location=bottom_left
+
+x-offset=4
+
+y-offset=-128
+
+width=300
+
+height=600

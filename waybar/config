@@ -1,0 +1,82 @@
+[
+{
+	"reload_style_on_change": true,
+	"layer": "top",
+	"position": "top",
+	"width": "1900",	
+	"modules-left":
+	["tray","cava"],
+
+	"modules-center":
+	["hyprland/window"],
+
+	"modules-right":
+	["pulseaudio","battery","custom/cat"],
+
+	"hyprland/workspaces": {
+
+		"persistent-workspaces": {
+			"*": 5}
+       		},
+
+		"battery": {
+		"format": "{icon}  {capacity}%",
+		"interval": 10,
+		"format-icons": ["","","","",""]
+
+		},
+	"pulseaudio": {
+		"format-icons": ["","","",""],
+		"format": "{icon}  {volume}%"
+	},
+	"custom/cat": {
+		"format": "ᓚᘏᗢ",
+		"on-click": "kitty -e sudo pacman -Syu"
+	},
+
+
+	"tray": {
+		"spacing": 8
+	}
+},
+
+{
+	"height": 12,
+	"reload_style_on_change": true,
+	"layer": "top",
+	"position": "bottom",
+	"modules-left": 
+	["cpu","memory","custom/wayves"],
+	"modules-center": 
+	["hyprland/workspaces"],
+	"modules-right":
+	["clock","mpris","temperature"],
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": 5 },
+
+			"format": ""
+	},
+
+
+	"clock": {
+		"format": "{:L%A, %B %d, %Y (%R)}"
+	},
+
+	"mpris": {
+		"interval": 1,
+		"format": "({position} / {length}) -- {title} - {artist}"
+
+	},
+
+	"cpu": {
+		"format": "{usage}% cpu",
+		"interval": 1
+	},
+
+	"memory": {
+		"format": "{used}% memory",
+		"interval": 1
+	}
+}
+]
