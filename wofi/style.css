@@ -5,18 +5,22 @@
 	font-family: "JetBrains Mono Nerd Font";
 	font-size: 12px;
 }
-
-#window {
-	border-radius: 8px;
-	border: none;
+#outer-box {
 	background: @surface;
+	border-radius: 16px;
+	border: 2px solid @primary;
+	padding: 8px;
+}
+#window {
+	border-radius: none;
+	border: none;
+	opacity: 0.9;
+	background: none;
 	color: @secondary;
 }
 
-::webkit-scrollbar {
-	color: none;
-	background: none;
-	border: none;
+#scroll {
+	margin: -2px 0px;
 }
 
 #input {
@@ -25,30 +29,40 @@
 	border: 2px solid @primary;
 	margin: 8px;
 	background-color: @surface_container_high;
-	color: @color3;
+	color: @foreground;
 }
-
+#input #text {
+	color: @foreground;
+}
 #entry {
+	text-align: center;
 	border-radius: 8px;
 	margin: 8px;
-	transition: all .25s ease-out;
 	border: none;
 	border-radius: none;
 	opacity: 1;
-	margin: 4px;
-	transition: all .05s ease-in-out;
-	background: @surface_container;
+	transition: all .25s ease-in-out;
+	background: @surface_container_high;
 	color: @primary;
+	padding-top: none;
+	padding-bottom: none;
+	padding: none;
 }
+
+
+
 #entry:selected {
-
 	border: none;
-	border-radius: 4px;
+	border-radius: 32px;
 	font-weight: bold;	
-	transition: all .25s ease-out;
-	color: @on_surface;
-	background: @primary_container;
+	transition: all .25s ease-out;	
+	color: @surface_dim;
+	background: @primary;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin: 4px;
 
-	margin: 2px;
 }
-
+#entry:selected #text {
+	color: @surface_dim;
+}

@@ -6,7 +6,7 @@ WALLPAPER_DIR="$HOME/Pictures/"  # Change this to your wallpaper directory
 generate_menu() {
     # Add random/shuffle option
     # Add all wallpapers
-    for img in "$WALLPAPER_DIR"/*.{jpg,jpeg,png}; do
+    for img in "$WALLPAPER_DIR"/*.{jpg,jpeg,png,gif}; do
         # Skip if no matches found
         [[ -f "$img" ]] || continue
 
@@ -17,9 +17,9 @@ generate_menu() {
 
 # Use wofi to display a list of wallpapers
 selected=$(generate_menu | wofi --show dmenu \
-    --x 4 \
-    --y -54 \
+    -n \
     --prompt "Select Wallpaper" \
+
     --conf ~/.config/wofi/config \
     --style ~/.config/wofi/style.css \
     --insensitive \
@@ -41,7 +41,7 @@ if [ -n "$selected" ]; then
     if [ -n "$original_path" ]; then
         # Set wallpaper using matugen
         matugen image "$original_path"
-	swww 'img "$original_path" --transition-type center'
+	swww 'img "$original_path" --transition-type any'
 
         # Save the selection for persistence
         echo "$original_path" > "$HOME/.cache/current_wallpaper"

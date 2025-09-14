@@ -5,23 +5,17 @@
 	font-size: 12px;
 }
 window#waybar {
-
-	padding-left: 12px;
-	padding-right: 12px;
+	opacity: 0.9;
 	background: none;
 }
 .modules-left, .modules-center, .modules-right {
 
 	margin-top: 2px;
 	margin-bottom: 2px;
-	margin-left: 4px;
-	margin-right: 4px;
 	border-radius: 16px;
 	padding-top: 0;
 	padding-bottom: 0;
 	font-weight: bold;
-	padding-left: 16px;
-	padding-right: 16px;
 	background: none;
 	color: @foreground;
 }
@@ -38,75 +32,129 @@ window#waybar {
 
 .modules-center {
 	background: none;
-	padding-left: 16px;
-	padding-right: 16px;
-	transition: all 1s ease-in-out;
 }
 
 #workspaces {
 	padding-left: 16px;
 	padding-right: 16px;
 	border-radius: 32px;
-	background: @surface_container;
+	background: none;
 }
-
 #window {
 	transition: all 0.1s ease-out;
-	background: @surface_container;
+	background: @surface_container_high;
 	padding-left: 16px;
 	padding-right: 16px;
-	border-radius: 16px;
+	border-radius: 0px 16px 16px 0px;
 }
 
 #workspaces button {
 	padding-top: 0px;
 	padding-bottom: 0px;
-	padding-left: 4px;
-	padding-right: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
 	border: none;
-	margin-left: 1px;
-	margin-right: 1px;
+	margin-left: 2px;
+	margin-right: 2px;
 	color: @foreground;
-	background: @on_primary;
+	background: @surface_container_high;
 	border-radius: 16px;
-	transition: all 0.25s ease-in-out;
+	transition: all 0.1s ease-out;
 }
 
 #workspaces button.active {
-	transition: all 0.25s ease-in-out;	
+	transition: all 0.1s ease-out;
 	padding-left: 12px;
 	padding-right: 12px;
-	background: @secondary;	
+	background: @primary;	
 	color: @surface_dim;
 }
 #workspaces button:hover {
-
+	transition: all 0.1s ease-out;
 	padding-left: 12px;
 	padding-right: 12px;
-	background: @secondary;
+	background: @source_color;
 	color: @surface_dim;
 
 }
-#mpris, #temperature, #cpu, #memory, #tray, #custom-wall, #custom-cat, #pulseaudio, #battery, #clock {
+#temperature, #cpu, #memory, #tray, #custom-wall, #custom-cat, #pulseaudio, #battery, #clock {
 
 
 	transition: all 0.1s ease-out;
 	background: @surface_container_high;
 	margin-left: 2px;
 	margin-right: 2px;
-	border-radius: 16px;
 	padding-left: 8px;
 	padding-right: 8px;
 
 }
 
-#custom-wall:hover {
+#clock {
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 16px;
+}
 
+
+#cava {
+	color: @primary;
+}
+
+
+#tray {
+	margin-right: 0px;
+	border-radius: 16px 0px 0px 16px;
+}
+#cpu {
+	border-radius: 16px 0px 0px 16px;
+	margin-left: 2px;
+	margin-right: 0px;
+}
+#memory {
+	transition: all 0.5s ease-out;
+	border-radius: 0px 16px 16px 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#cava {
 	transition: all 0.1s ease-out;
-	padding-left: 12px;
-	padding-right: 12px;
-	color: @surface_dim;
-	background: @on_surface;
+	background: @surface_container_high;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-right: 0;
+	border-radius: 16px 0px 0px 16px;
+
+}
+#battery {
+	margin-left: 0px;
+	margin-right: 0px;
+	border-radius: 0px;
+}
+
+#temperature {
+
+	border-radius: 0px 16px 16px 0px;
+	margin-left: 0px;
+}
+
+#pulseaudio {
+	border-radius: 16px 0px 0px 16px; 
+	margin-right: 0px;
+}
+
+#custom-cat {
+	border-radius: 0px 16px 16px 0px;
+	margin-left: 0px;
+}
+
+#mpris {
+	transition: all 0.1s ease-out;
+	background: @surface_container_high;
+	margin-right: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius: 0px;
 }
 
 #pulseaudio:hover {

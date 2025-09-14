@@ -1,10 +1,11 @@
 [Configuration]
-location=bottom_left
+location=6
 
-x-offset=4
 
-y-offset=-128
-
+xoffset=0
+yoffset=500
 width=300
+hide_scroll=true
+height=200
+content_halign=center
 
-height=600
